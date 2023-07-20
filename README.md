@@ -2,32 +2,32 @@
 
 ## Background
 We need to present a strategic recommendation to Julia that is supported by data which she can use for the upcoming category review. 
-The client is particulary insterested in customer segments and their chip purchasing behaviours.
+The client is particularly interested in customer segments and their chip purchasing behaviours.
 
 #### `Main Goals of this task are:`
-- Examine data: check missing data, anomalies, outliers and clean them.
-- Data analysis and customer segments: create charts or graphs, insight and recommendations.
+- Examine data: check missing data, anomalies, and outliers and clean them.
+- Data analysis and customer segments: create charts, graphs, insight, and recommendations.
 - Metrics analysis: monthly sales and monthly customers.
 
 ### About the datasets
-- The transaction dataset has 8 characteristics with 264,863 rows, while the purchase behaviour dataset has 3 characteristics with 72,637 rows. these datasets were merged. 
+- The transaction dataset has 8 characteristics with 264,863 rows, while the purchase behaviour dataset has 3 features with 72,637 rows. these datasets were merged. 
 - There are no missing values.
-- The date characteristic was in integer format, so it was changed to datetime format.
+- The date characteristic was in integer format, which was changed to DateTime format.
 - The prod_qty and tot_sales features have extremely high values.
-- Some product_names are written in more than one way. Examples: Dorito and Doritos, Smith and Smith, Red and RDD.
+- Some product names are written in more than one way. Examples: Dorito and Doritos, Smith and Smith, Red and RDD.
 
 ## Data Cleaning
 - Date feature changed to date/time format.
 - Extremely high values changed to median data.
 - Split the first word of the product_name feature to get the brand name. 
-- Some brands were misspelled. They have been cleaned up.
-- Split numbers from product_name feature to get package size.
+- Some brands were misspelt. They have been cleaned up.
+- Split numbers from the product_name feature to get package size.
 
 ## Exploratory Data Analysis
 
 ### `How are sales performing?`
 - This dataset is a year's sales. There are 365 days in a year. But there are only 364 transactions. 
-It was a Christmas day where there was no transaction because the shop was closed.
+It was Christmas day and there was no transaction because the shop was closed.
 - Sales increase in December exactly one week before Christmas Day.
 ![alt text](https://github.com/almaratussaliha/Customer_Analytics-Quantium/blob/master/img/salesdist.png?raw=true)
 
@@ -44,14 +44,14 @@ This pack size also contributes to high sales.
 - 175g pack size has 66,390 products sold with sales of $48,5437.
 ![alt text](https://github.com/almaratussaliha/Customer_Analytics-Quantium/blob/master/img/package.png?raw=true)
 
-### `Which lifestage customers contribute to high sales?`
+### `Which life stage customers contribute to high sales?`
 - There are 7 life stages. Most customers are older singles/couples, followed by retirees and older families.
-- The Older Singles/Couples has the highest number with $402,427 in sales.
+- The Older Singles/Couples have the highest number with $402,427 in sales.
 - New families have the lowest number of transactions among the segments.
 ![alt text](https://github.com/almaratussaliha/Customer_Analytics-Quantium/blob/master/img/custsales.png?raw=true)
 
 ### `Who spends the most on transactions based on life stages and customer segments?`
-- By segment, Mainstream - Young Singles/Couples has the highest number of customers, followed by Mainstream - Retirees. 
+- By segment, Mainstream - Young Singles/Couples have the highest number of customers, followed by Mainstream - Retirees. 
 New Families have the lowest number of customers across all segments.
 ![alt text](https://github.com/almaratussaliha/Customer_Analytics-Quantium/blob/master/img/custbyseg.png?raw=true)
 
